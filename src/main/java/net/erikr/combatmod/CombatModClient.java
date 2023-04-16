@@ -20,6 +20,7 @@ import static net.erikr.combatmod.gui.Gui.mc;
 public class CombatModClient implements ClientModInitializer {
     //Keybinding
     public static KeyBinding OpenMenuKey;
+    public static KeyBinding ZoomKey;
 
     //Instancing For Special Access
     public static CombatModClient INSTANCE = new CombatModClient();
@@ -30,6 +31,7 @@ public class CombatModClient implements ClientModInitializer {
     public void onInitializeClient() {
         //Keybinding
         OpenMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.combatmod.openmenu", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT_SHIFT, "category.combatmod"));
+        ZoomKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.combatmod.zoom", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_C, "category.combatmod"));
 
         //Remove when adding Config
         SharedVariables.EnabledButtons.add("ToggleCustomHotbar");
