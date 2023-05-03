@@ -1,5 +1,6 @@
 
 <p align="center">
+<img src="https://user-images.githubusercontent.com/74710895/236009536-6da9f0d1-a48f-4c46-958b-eabcc46b2acf.png" width="50%" /></p>
 <h1 align="center">CombatMod</h1>
 <p align="center">by Erik_R</p>
 <div align="center">
