@@ -34,6 +34,7 @@
 - Click Gui
 - Built in Texture Pack for Gui ELements [Can be overridden]
 - Custom Title Screen 
+- Zoom Hotkey
  
 ### Images
 <img src="https://user-images.githubusercontent.com/74710895/236004455-eacbeda2-99b9-4c7e-8857-ddbcdcaf49d4.png" width="50%" /></p>
