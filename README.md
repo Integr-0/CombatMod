@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/74710895/214377382-a86ea6cb-5216-4506-8ad3-0b2c98fe6a02.png" width="20%"/></p>
+<img src="https://user-images.githubusercontent.com/74710895/236003530-4eb68b8e-ff61-4d9b-96ce-9e1f2159c6f3.png" width="20%"/></p>
 <h1 align="center">CombatMod</h1>
 <p align="center">by Erik_R</p>
 <div align="center">
@@ -38,4 +38,4 @@
 
 - Built in Texture Pack for Gui ELements [Can be overridden]
 
-- Custom Title Screen
+- Custom Title Screen 
