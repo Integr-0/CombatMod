@@ -28,7 +28,7 @@ public class Menu extends Screen {
         int WindowWidth = mc.getWindow().getScaledWidth();
 
         //Box
-        GuiDrawer.drawBox(matrices, WindowWidth/2-185, WindowHeight/2-80, WindowWidth/2+185, WindowHeight/2+75, new Color(255, 255, 255, 255).getRGB());
+        GuiDrawer.drawBox(matrices, WindowWidth/2-185, WindowHeight/2-80, WindowWidth/2+185, WindowHeight/2+75, SharedVariables.GuiBack);
 
         //Buttons
         GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2-60, WindowHeight/2-75, WindowWidth/2+60, WindowHeight/2-55, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "ToggleCustomHotbar");
@@ -50,33 +50,36 @@ public class Menu extends Screen {
         //GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2+25, WindowWidth/2+180, WindowHeight/2+45, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Test");
 
         //Theme
-        GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2-60, WindowHeight/2+50, WindowWidth/2+60, WindowHeight/2+70, new Color(249, 141, 0, 255).getRGB(), new Color(16, 213, 235, 255).getRGB(), "SwitchTheme");
+        GuiDrawer.drawCycler(matrices, mouseX, mouseY, WindowWidth/2-60, WindowHeight/2+50, WindowWidth/2+60, WindowHeight/2+70, SharedVariables.GuiColor, "SwitchTheme");
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Theme: " + SharedVariables.ThemeColor, WindowWidth/2-50, WindowHeight/2+57, SharedVariables.GuiBack);
 
-        if (SharedVariables.EnabledButtons.contains("SwitchTheme")) {
-            GuiDrawer.drawText(matrices, Formatting.BOLD + "Theme: Orange", WindowWidth/2-50, WindowHeight/2+57, new Color(255, 255, 255, 255).getRGB());
+        //Mode
+        GuiDrawer.drawCycler(matrices, mouseX, mouseY, WindowWidth/2-180, WindowHeight/2+50, WindowWidth/2-65, WindowHeight/2+70, SharedVariables.GuiColor, "SwitchThemeMode");
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Mode: " + SharedVariables.ThemeMode, WindowWidth/2-170, WindowHeight/2+57, SharedVariables.GuiBack);
 
-        } else {
-            GuiDrawer.drawText(matrices, Formatting.BOLD + "Theme: Blue", WindowWidth/2-50, WindowHeight/2+57, new Color(255, 255, 255, 255).getRGB());
-        }
+        //Editor
+        GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2+50, WindowWidth/2+180, WindowHeight/2+70, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "LaunchEditor");
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Gui Editor", WindowWidth/2+75, WindowHeight/2+57, SharedVariables.GuiBack);
+
 
         //Text
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Hotbar Display", WindowWidth/2-50, WindowHeight/2-68, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Player Inspector", WindowWidth/2-50, WindowHeight/2-43, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Player Info", WindowWidth/2-50, WindowHeight/2-18, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Coordinate Hud", WindowWidth/2-50, WindowHeight/2+7, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Direction Hud", WindowWidth/2-50, WindowHeight/2+32, new Color(255, 255, 255, 255).getRGB());
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Hotbar Display", WindowWidth/2-50, WindowHeight/2-68, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Player Inspector", WindowWidth/2-50, WindowHeight/2-43, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Player Info", WindowWidth/2-50, WindowHeight/2-18, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Coordinate Hud", WindowWidth/2-50, WindowHeight/2+7, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Direction Hud", WindowWidth/2-50, WindowHeight/2+32, SharedVariables.GuiBack);
 
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Auto Sprint", WindowWidth/2-170, WindowHeight/2-68, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Fullbright", WindowWidth/2-170, WindowHeight/2-43, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "No BreakParticle", WindowWidth/2-170, WindowHeight/2-18, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Own Nametag", WindowWidth/2-170, WindowHeight/2+7, new Color(255, 255, 255, 255).getRGB());
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "No Explosions", WindowWidth/2-170, WindowHeight/2+32, new Color(255, 255, 255, 255).getRGB());
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Auto Sprint", WindowWidth/2-170, WindowHeight/2-68, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Fullbright", WindowWidth/2-170, WindowHeight/2-43, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "No BreakParticle", WindowWidth/2-170, WindowHeight/2-18, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Own Nametag", WindowWidth/2-170, WindowHeight/2+7, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "No Explosions", WindowWidth/2-170, WindowHeight/2+32, SharedVariables.GuiBack);
 
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Keystrokes", WindowWidth/2+75, WindowHeight/2-68, new Color(255, 255, 255, 255).getRGB());
-        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-43, new Color(255, 255, 255, 255).getRGB());
-        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-18, new Color(255, 255, 255, 255).getRGB());
-        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+7, new Color(255, 255, 255, 255).getRGB());
-        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+32, new Color(255, 255, 255, 255).getRGB());
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Keystrokes", WindowWidth/2+75, WindowHeight/2-68, SharedVariables.GuiBack);
+        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-43, SharedVariables.GuiBack);
+        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-18, SharedVariables.GuiBack);
+        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+7, SharedVariables.GuiBack);
+        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+32, SharedVariables.GuiBack);
 
         super.render(matrices, mouseX, mouseY, delta);
     }
@@ -90,6 +93,7 @@ public class Menu extends Screen {
 
         return super.mouseClicked(mouseX, mouseY, button);
     }
+
 
     @Override
     public void tick() {

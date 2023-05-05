@@ -42,7 +42,7 @@ public abstract class WorldRendererMixin {
             outlineVertexConsumers.setColor(255, 255, 255, 255);
 
             if (entity.equals(SharedVariables.EntityToInspect)) {
-                outlineVertexConsumers.setColor(SharedVariables.GuiRed, SharedVariables.GuiGreen, SharedVariables.GuiBlue, 255);
+                outlineVertexConsumers.setColor(new Color(SharedVariables.GuiColor).getRed(), new Color(SharedVariables.GuiColor).getGreen(), new Color(SharedVariables.GuiColor).getBlue(), 255);
             }
 
             //Easter Egg for Specific Players

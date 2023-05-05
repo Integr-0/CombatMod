@@ -4,6 +4,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 
 import java.awt.*;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class SharedVariables {
@@ -13,6 +14,9 @@ public class SharedVariables {
     public static boolean OverlayTinted;
 
     public static String Version = "1.2.3";
+
+    public static String ThemeColor = "Orange"; //Orange, Blue, Red, Green, Yellow, Rainbow
+    public static String ThemeMode = "Light"; //Light, Dark
 
     //Toggles for Features
     public static boolean NoBreakingParticles = true;
@@ -31,15 +35,20 @@ public class SharedVariables {
     public static PlayerEntity EntityToInspect = null;
 
     //Gui Coloring
-    public static int GuiRed = 249;
-    public static int GuiGreen = 141;
-    public static int GuiBlue = 0;
     public static int GuiColor = new Color(249, 141, 0).getRGB();
+
+    public static int GuiBack = new Color(255, 255, 255, 255).getRGB();
 
     //Enabled Buttons
     public static HashSet<String> EnabledButtons = new HashSet<>();
 
     //If mouse is down
     public static boolean MouseDown;
+
+    public static boolean MouseHeld;
+
+    public static HashMap<String, Integer> ButtonPoses = new HashMap<>();
+
+    public static String dragging;
 
 }
