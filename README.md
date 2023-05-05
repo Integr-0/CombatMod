@@ -30,9 +30,10 @@
 - Hotbar Display [Health and Hunger Bar rendering with actual bars]
 - Player Inspector [Shows Info for the Player you are Looking at, may be bannable on some servers]
 - Player Info [Shows your Own Informations]
-- 2 Themes [Blue and Orange]
+- Themes
 - Click Gui
-- Built in Texture Pack for Gui ELements [Can be overridden]
+- Gui Editor
+- Rainbow Theme
 - Custom Title Screen 
 - Zoom Hotkey
  
