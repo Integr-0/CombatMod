@@ -102,7 +102,6 @@ public class Gui {
                 }
             }
 
-            SharedVariables.EntityToInspect = mc.player;
             if (SharedVariables.EntityToInspect != null) {
                 GuiDrawer.drawBox(matrices, SharedVariables.ButtonPoses.get("pinsx1"), SharedVariables.ButtonPoses.get("pinsy1"), SharedVariables.ButtonPoses.get("pinsx2"), SharedVariables.ButtonPoses.get("pinsy2"), SharedVariables.GuiBack);
                 GuiDrawer.drawText(matrices, Formatting.BOLD + "Inspected:", SharedVariables.ButtonPoses.get("pinsx1")+6, SharedVariables.ButtonPoses.get("pinsy1")+6, SharedVariables.GuiColor);
