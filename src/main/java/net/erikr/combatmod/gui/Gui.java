@@ -2,6 +2,7 @@ package net.erikr.combatmod.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.erikr.combatmod.SharedVariables;
+import net.erikr.combatmod.configsys.ConfigSystem;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.option.Perspective;
@@ -19,7 +20,6 @@ import java.awt.*;
 public class Gui {
     //MinecraftClient
     public static MinecraftClient mc = MinecraftClient.getInstance();
-    private static boolean inited = false;
 
     //Player Staring Check
     public static boolean PlayerStaring(Entity entity) {
@@ -40,34 +40,96 @@ public class Gui {
         int WindowHeight = mc.getWindow().getScaledHeight();
         int WindowWidth = mc.getWindow().getScaledWidth();
 
-        if (!inited) {
-            //TODO: remove when adding config
-            SharedVariables.ButtonPoses.put("chudx1", 4);
-            SharedVariables.ButtonPoses.put("chudy1", 4);
-            SharedVariables.ButtonPoses.put("chudx2", 70);
-            SharedVariables.ButtonPoses.put("chudy2", 44);
+        if (ConfigSystem.getInited().equals("False")) {
+            if (ConfigSystem.buttonPoseGetter(20) == "error") {
+                ConfigSystem.printButtonPose("  chudx1", 4, 20);
+            }
+            if (ConfigSystem.buttonPoseGetter(21) == "error") {
+                ConfigSystem.printButtonPose("  chudy1", 4, 21);
+            }
+            if (ConfigSystem.buttonPoseGetter(22) == "error") {
+                ConfigSystem.printButtonPose("  chudx2", 70, 22);
+            }
+            if (ConfigSystem.buttonPoseGetter(23) == "error") {
+                ConfigSystem.printButtonPose("  chudy2", 44, 23);
+            }
+            if (ConfigSystem.buttonPoseGetter(24) == "error") {
+                ConfigSystem.printButtonPose("  dhudx1", 4, 24);
+            }
+            if (ConfigSystem.buttonPoseGetter(25) == "error") {
+                ConfigSystem.printButtonPose("  dhudy1", 46, 25);
+            }
+            if (ConfigSystem.buttonPoseGetter(26) == "error") {
+                ConfigSystem.printButtonPose("  dhudx2", 110, 26);
+            }
+            if (ConfigSystem.buttonPoseGetter(27) == "error") {
+                ConfigSystem.printButtonPose("  dhudy2", 65, 27);
+            }
+            if (ConfigSystem.buttonPoseGetter(28) == "error") {
+                ConfigSystem.printButtonPose("  pinsx1", WindowWidth-175, 28);
+            }
+            if (ConfigSystem.buttonPoseGetter(29) == "error") {
+                ConfigSystem.printButtonPose("  pinsy1", 4, 29);
+            }
+            if (ConfigSystem.buttonPoseGetter(30) == "error") {
+                ConfigSystem.printButtonPose("  pinsx2", WindowWidth-95, 30);
+            }
+            if (ConfigSystem.buttonPoseGetter(31) == "error") {
+                ConfigSystem.printButtonPose("  pinsy2", 44, 31);
+            }
+            if (ConfigSystem.buttonPoseGetter(32) == "error") {
+                ConfigSystem.printButtonPose("  pinfox1", WindowWidth-90, 32);
+            }
+            if (ConfigSystem.buttonPoseGetter(33) == "error") {
+                ConfigSystem.printButtonPose("  pinfoy1", 4, 33);
+            }
+            if (ConfigSystem.buttonPoseGetter(34) == "error") {
+                ConfigSystem.printButtonPose("  pinfox2", WindowWidth-10, 34);
+            }
+            if (ConfigSystem.buttonPoseGetter(35) == "error") {
+                ConfigSystem.printButtonPose("  pinfoy2", 44, 35);
+            }
+            if (ConfigSystem.buttonPoseGetter(36) == "error") {
+                ConfigSystem.printButtonPose("  keyx1", 4, 36);
+            }
+            if (ConfigSystem.buttonPoseGetter(37) == "error") {
+                ConfigSystem.printButtonPose("  keyy1", 90, 37);
+            }
+            if (ConfigSystem.buttonPoseGetter(38) == "error") {
+                ConfigSystem.printButtonPose("  keyx2", 86, 38);
+            }
+            if (ConfigSystem.buttonPoseGetter(39) == "error") {
+                ConfigSystem.printButtonPose("  keyy2", 170, 39);
+            }
+            if (ConfigSystem.decoratorHasError(40, "}")) {
+                ConfigSystem.writeLine("}", 40);
+            }
+            ConfigSystem.writeLine("inited = True", 3);
 
-            SharedVariables.ButtonPoses.put("dhudx1", 4);
-            SharedVariables.ButtonPoses.put("dhudy1", 46);
-            SharedVariables.ButtonPoses.put("dhudx2", 110);
-            SharedVariables.ButtonPoses.put("dhudy2", 65);
+            SharedVariables.ButtonPoses.put("chudx1", Integer.valueOf(ConfigSystem.buttonPoseGetter(20)));
+            SharedVariables.ButtonPoses.put("chudy1", Integer.valueOf(ConfigSystem.buttonPoseGetter(21)));
+            SharedVariables.ButtonPoses.put("chudx2", Integer.valueOf(ConfigSystem.buttonPoseGetter(22)));
+            SharedVariables.ButtonPoses.put("chudy2", Integer.valueOf(ConfigSystem.buttonPoseGetter(23)));
 
-            SharedVariables.ButtonPoses.put("pinsx1", WindowWidth-175);
-            SharedVariables.ButtonPoses.put("pinsy1", 4);
-            SharedVariables.ButtonPoses.put("pinsx2", WindowWidth-95);
-            SharedVariables.ButtonPoses.put("pinsy2", 44);
+            SharedVariables.ButtonPoses.put("dhudx1", Integer.valueOf(ConfigSystem.buttonPoseGetter(24)));
+            SharedVariables.ButtonPoses.put("dhudy1", Integer.valueOf(ConfigSystem.buttonPoseGetter(25)));
+            SharedVariables.ButtonPoses.put("dhudx2", Integer.valueOf(ConfigSystem.buttonPoseGetter(26)));
+            SharedVariables.ButtonPoses.put("dhudy2", Integer.valueOf(ConfigSystem.buttonPoseGetter(27)));
 
-            SharedVariables.ButtonPoses.put("pinfox1", WindowWidth-90);
-            SharedVariables.ButtonPoses.put("pinfoy1", 4);
-            SharedVariables.ButtonPoses.put("pinfox2", WindowWidth-10);
-            SharedVariables.ButtonPoses.put("pinfoy2", 44);
+            SharedVariables.ButtonPoses.put("pinsx1", Integer.valueOf(ConfigSystem.buttonPoseGetter(28)));
+            SharedVariables.ButtonPoses.put("pinsy1", Integer.valueOf(ConfigSystem.buttonPoseGetter(29)));
+            SharedVariables.ButtonPoses.put("pinsx2", Integer.valueOf(ConfigSystem.buttonPoseGetter(30)));
+            SharedVariables.ButtonPoses.put("pinsy2", Integer.valueOf(ConfigSystem.buttonPoseGetter(31)));
 
-            SharedVariables.ButtonPoses.put("keyx1", 4);
-            SharedVariables.ButtonPoses.put("keyy1", 90);
-            SharedVariables.ButtonPoses.put("keyx2", 86);
-            SharedVariables.ButtonPoses.put("keyy2", 170);
-            inited = true;
-            //TODO: remove when adding config
+            SharedVariables.ButtonPoses.put("pinfox1", Integer.valueOf(ConfigSystem.buttonPoseGetter(32)));
+            SharedVariables.ButtonPoses.put("pinfoy1", Integer.valueOf(ConfigSystem.buttonPoseGetter(33)));
+            SharedVariables.ButtonPoses.put("pinfox2", Integer.valueOf(ConfigSystem.buttonPoseGetter(34)));
+            SharedVariables.ButtonPoses.put("pinfoy2", Integer.valueOf(ConfigSystem.buttonPoseGetter(35)));
+
+            SharedVariables.ButtonPoses.put("keyx1", Integer.valueOf(ConfigSystem.buttonPoseGetter(36)));
+            SharedVariables.ButtonPoses.put("keyy1", Integer.valueOf(ConfigSystem.buttonPoseGetter(37)));
+            SharedVariables.ButtonPoses.put("keyx2", Integer.valueOf(ConfigSystem.buttonPoseGetter(38)));
+            SharedVariables.ButtonPoses.put("keyy2", Integer.valueOf(ConfigSystem.buttonPoseGetter(39)));
         }
 
         //Position

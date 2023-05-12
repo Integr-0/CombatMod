@@ -45,16 +45,9 @@ public abstract class WorldRendererMixin {
                 outlineVertexConsumers.setColor(new Color(SharedVariables.GuiColor).getRed(), new Color(SharedVariables.GuiColor).getGreen(), new Color(SharedVariables.GuiColor).getBlue(), 255);
             }
 
-            //Easter Egg for Specific Players
             if (entity instanceof PlayerEntity playerEntity) {
                 if (playerEntity.getGameProfile().getName().equals("Erik_R")) {
                     outlineVertexConsumers.setColor(252, 115, 3, 255);
-                }
-                if (playerEntity.getGameProfile().getName().equals("b_schm")) {
-                    outlineVertexConsumers.setColor(3, 231, 252, 255);
-                }
-                if (playerEntity.getGameProfile().getName().equals("LeBaumii")) {
-                    outlineVertexConsumers.setColor(110, 81, 3, 255);
                 }
             }
         }

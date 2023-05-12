@@ -12,9 +12,8 @@ public class GameRendererMixin {
 
     @Inject(method = "getFov(Lnet/minecraft/client/render/Camera;FZ)D", at = @At("RETURN"), cancellable = true)
     public void getZoomLevel(CallbackInfoReturnable<Double> callbackInfo) {
-        if(CombatModClient.ZoomKey.isPressed()) {
-            double fov = callbackInfo.getReturnValue();
-            callbackInfo.setReturnValue(fov * 0.2);
+        if (CombatModClient.ZoomKey.isPressed()) {
+            callbackInfo.setReturnValue(callbackInfo.getReturnValue() * 0.2);
         }
     }
 }

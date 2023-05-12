@@ -33,8 +33,6 @@ public class GuiDrawer {
     }
 
     public static void drawBoxMovable(MatrixStack Matrices, int mouseX, int mouseY, int Color, String name, String label) {
-
-
         int sizeX = SharedVariables.ButtonPoses.get(name+"x2") - SharedVariables.ButtonPoses.get(name+"x1");
         int sizeY = SharedVariables.ButtonPoses.get(name+"y2") - SharedVariables.ButtonPoses.get(name+"y1");
 
