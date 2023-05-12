@@ -34,7 +34,7 @@
 - Click Gui
 - Gui Editor
 - Rainbow Theme
-- Custom Title Screen 
+- Config System
 - Zoom Hotkey
  
 ### Images
