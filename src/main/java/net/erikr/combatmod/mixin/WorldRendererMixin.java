@@ -37,7 +37,7 @@ public abstract class WorldRendererMixin {
     //Colored Outlines
     @Inject(method = "renderEntity", at = @At("HEAD"))
     private void renderEntity(Entity entity, double cameraX, double cameraY, double cameraZ, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, CallbackInfo ci) {
-        if (vertexConsumers instanceof OutlineVertexConsumerProvider outlineVertexConsumers) {
+        if (vertexConsumers instanceof OutlineVertexConsumerProvider outlineVertexConsumers && SharedVariables.RenderPlayerInspector) {
 
             outlineVertexConsumers.setColor(255, 255, 255, 255);
 
