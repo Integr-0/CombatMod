@@ -31,6 +31,7 @@ public class SharedVariables {
     public static boolean RenderDirectionHud = true;
     public static boolean Keystrokes = true;
 
+    public static boolean Anticheat = true;
     //Inspected Entity
     public static PlayerEntity EntityToInspect = null;
 

@@ -76,6 +76,9 @@ public class CombatModClient implements ClientModInitializer {
         if (ConfigSystem.enabledButtonGetter(16).equals("True")) {
             SharedVariables.EnabledButtons.add("ToggleKeystrokes");
         }
+        if (ConfigSystem.enabledButtonGetter(17).equals("True")) {
+            SharedVariables.EnabledButtons.add("Anticheat");
+        }
 
         if (ConfigSystem.getInited().equals("True")) {
             SharedVariables.ButtonPoses.put("chudx1", Integer.valueOf(ConfigSystem.buttonPoseGetter(20)));
@@ -257,6 +260,15 @@ public class CombatModClient implements ClientModInitializer {
             }
         }
 
+        if (SharedVariables.EnabledButtons.contains("Anticheat") && !SharedVariables.Anticheat || !SharedVariables.EnabledButtons.contains("Anticheat") && SharedVariables.Anticheat) {
+            if (SharedVariables.EnabledButtons.contains("Anticheat")) {
+                SharedVariables.Anticheat = true;
+                ConfigSystem.writeLine("   Anticheat = True", 17);
+            } else {
+                SharedVariables.Anticheat = false;
+                ConfigSystem.writeLine("   Anticheat = False", 17);
+            }
+        }
 
         //Mode Switcher
         if (SharedVariables.ThemeMode.equals("Dark")) {

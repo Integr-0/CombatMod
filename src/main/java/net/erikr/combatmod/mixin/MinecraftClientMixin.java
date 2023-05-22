@@ -2,6 +2,7 @@ package net.erikr.combatmod.mixin;
 
 import net.erikr.combatmod.CombatModClient;
 import net.erikr.combatmod.SharedVariables;
+import net.erikr.combatmod.anticheatsys.Detector;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -20,6 +21,7 @@ public class MinecraftClientMixin {
     public void onTick(CallbackInfo ci) {
         if (mc.player != null) {
             CombatModClient.INSTANCE.onTick();
+            Detector.INSTANCE.onTick();
         }
     }
 

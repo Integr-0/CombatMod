@@ -44,7 +44,7 @@ public class Menu extends Screen {
         GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2-180, WindowHeight/2+25, WindowWidth/2-65, WindowHeight/2+45, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "ToggleExplosions");
 
         GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2-75, WindowWidth/2+180, WindowHeight/2-55, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "ToggleKeystrokes");
-        //GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2-50, WindowWidth/2+180, WindowHeight/2-30, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Test");
+        GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2-50, WindowWidth/2+180, WindowHeight/2-30, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Anticheat");
         //GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2-25, WindowWidth/2+180, WindowHeight/2-5, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Test");
         //GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2-0, WindowWidth/2+180, WindowHeight/2+20, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Test");
         //GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2+65, WindowHeight/2+25, WindowWidth/2+180, WindowHeight/2+45, SharedVariables.GuiColor, new Color(151, 151, 151, 255).getRGB(), "Test");
@@ -76,7 +76,7 @@ public class Menu extends Screen {
         GuiDrawer.drawText(matrices, Formatting.BOLD + "No Explosions", WindowWidth/2-170, WindowHeight/2+32, SharedVariables.GuiBack);
 
         GuiDrawer.drawText(matrices, Formatting.BOLD + "Keystrokes", WindowWidth/2+75, WindowHeight/2-68, SharedVariables.GuiBack);
-        //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-43, SharedVariables.GuiBack);
+        GuiDrawer.drawText(matrices, Formatting.BOLD + "Anticheat", WindowWidth/2+75, WindowHeight/2-43, SharedVariables.GuiBack);
         //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2-18, SharedVariables.GuiBack);
         //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+7, SharedVariables.GuiBack);
         //GuiDrawer.drawText(matrices, Formatting.BOLD + "Test", WindowWidth/2+75, WindowHeight/2+32, SharedVariables.GuiBack);
