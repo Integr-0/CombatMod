@@ -27,7 +27,7 @@ public class Detector {
             for (Entity e : mc.world.getEntities()) {
                 if (e instanceof PlayerEntity && e.distanceTo(mc.player) < 200 /* && e != mc.player*/) {
                     checkForFly((PlayerEntity) e);
-                    checkForVelo((PlayerEntity) e);
+                    //checkForVelo((PlayerEntity) e);
                 }
             }
         }
@@ -35,7 +35,7 @@ public class Detector {
 
     public void checkForFly(PlayerEntity e) {
         if (PlayerFlying(e)) {
-            if (flyTime.get(e) != null && flyTime.get(e) > 300) {
+            if (flyTime.get(e) != null && flyTime.get(e) > 200) {
                 flightCheck.sendAlert(e);
                 flyTime.put(e, 0);
             } else {
