@@ -28,13 +28,11 @@
 - No Explosion Particles [Removes the Clientside Explosion Particles]
 - Own Nametag [Shows your Own Nametag]
 - Hotbar Display [Health and Hunger Bar rendering with actual bars]
-- Player Inspector [Shows Info for the Player you are Looking at, may be bannable on some servers]
+- Player Inspector [Shows Info for the Player you are Looking at, may be disallowed on some servers]
 - Player Info [Shows your Own Informations]
 - Themes
 - Click Gui
 - Gui Editor
-- Rainbow Theme
-- Config System
 - Zoom Hotkey
 - Clientside Anticheat
  
