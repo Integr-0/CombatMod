@@ -1,5 +1,8 @@
 package net.erikr.combatmod;
 
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 
@@ -13,7 +16,9 @@ public class SharedVariables {
     public static int OverlayRemaining;
     public static boolean OverlayTinted;
 
-    public static String Version = "1.2.3";
+    public static String Version = FabricLoader.getInstance().getModContainer("combatmod").get().getMetadata().getVersion().toString();
+
+    public static Entity lastAttacker;
 
     public static String ThemeColor = "Orange"; //Orange, Blue, Red, Green, Yellow, Rainbow
     public static String ThemeMode = "Light"; //Light, Dark

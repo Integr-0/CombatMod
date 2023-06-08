@@ -4,6 +4,7 @@
   "package": "net.erikr.combatmod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+
   ],
   "client": [
     "BlockMixin",
@@ -13,6 +14,7 @@
     "LivingEntityRendererMixin",
     "MinecraftClientMixin",
     "TitleScreenMixin",
+    "EntityMixin",
     "WorldRendererMixin"
   ],
   "injectors": {
