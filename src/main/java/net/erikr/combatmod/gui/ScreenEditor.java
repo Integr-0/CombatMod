@@ -1,6 +1,7 @@
 package net.erikr.combatmod.gui;
 
 import net.erikr.combatmod.SharedVariables;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
@@ -21,19 +22,19 @@ public class ScreenEditor extends Screen {
     public static Screen INSTANCE = new ScreenEditor();
 
     @Override
-    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
+    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         //Height + Width
         int WindowHeight = mc.getWindow().getScaledHeight();
         int WindowWidth = mc.getWindow().getScaledWidth();
 
-        GuiDrawer.drawButton(matrices, mouseX, mouseY, WindowWidth/2-35, WindowHeight/2-15, WindowWidth/2+35, WindowHeight/2+15, SharedVariables.GuiColor, SharedVariables.GuiBack, "ResetEditor");
-        GuiDrawer.drawText(matrices, Formatting.BOLD + "Reset Pos", WindowWidth/2-30, WindowHeight/2-4, SharedVariables.GuiColor);
+        GuiDrawer.drawButton(context, mouseX, mouseY, WindowWidth/2-35, WindowHeight/2-15, WindowWidth/2+35, WindowHeight/2+15, SharedVariables.GuiColor, SharedVariables.GuiBack, "ResetEditor");
+        GuiDrawer.drawText(context, Formatting.BOLD + "Reset Pos", WindowWidth/2-30, WindowHeight/2-4, SharedVariables.GuiColor);
 
-        GuiDrawer.drawBoxMovable(matrices, mouseX, mouseY, SharedVariables.GuiBack, "chud", "Coordinates"); //coordinate hud
-        GuiDrawer.drawBoxMovable(matrices, mouseX, mouseY, SharedVariables.GuiBack, "dhud", "Direction"); //direction hud
-        GuiDrawer.drawBoxMovable(matrices, mouseX, mouseY, SharedVariables.GuiBack, "pins", "Inspector"); //pinspector
-        GuiDrawer.drawBoxMovable(matrices, mouseX, mouseY, SharedVariables.GuiBack, "pinfo", "Info"); //pinfo
-        GuiDrawer.drawBoxMovable(matrices, mouseX, mouseY, SharedVariables.GuiBack, "key", "Keystrokes"); //keystrokes
+        GuiDrawer.drawBoxMovable(context, mouseX, mouseY, SharedVariables.GuiBack, "chud", "Coordinates"); //coordinate hud
+        GuiDrawer.drawBoxMovable(context, mouseX, mouseY, SharedVariables.GuiBack, "dhud", "Direction"); //direction hud
+        GuiDrawer.drawBoxMovable(context, mouseX, mouseY, SharedVariables.GuiBack, "pins", "Inspector"); //pinspector
+        GuiDrawer.drawBoxMovable(context, mouseX, mouseY, SharedVariables.GuiBack, "pinfo", "Info"); //pinfo
+        GuiDrawer.drawBoxMovable(context, mouseX, mouseY, SharedVariables.GuiBack, "key", "Keystrokes"); //keystrokes
     }
 
     @Override
