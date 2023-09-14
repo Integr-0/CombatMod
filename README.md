@@ -5,7 +5,7 @@
 <p align="center">by Integr</p>
 <div align="center">
 
-  <a href="https://fabricmc.net/use/installer/"><img src="https://img.shields.io/badge/Modloader-Fabric%201.19.4-orange"/> <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img src="https://img.shields.io/badge/Requires-%20Fabric%20API-lightgrey"/>
+  <a href="https://fabricmc.net/use/installer/"><img src="https://img.shields.io/badge/Modloader-Fabric%201.20.1-orange"/> <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img src="https://img.shields.io/badge/Requires-%20Fabric%20API-lightgrey"/>
 </div>
 
 ### Building the mod yourself
