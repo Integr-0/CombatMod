@@ -46,7 +46,6 @@
 - No Explosion Particles [Removes the Clientside Explosion Particles]
 - Own Nametag [Shows your Own Nametag]
 - Hotbar Display [Health and Hunger Bar rendering with actual bars]
-- Gui Editor
 - Zoom Hotkey
 
 ### Images
