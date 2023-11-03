@@ -33,9 +33,22 @@
 - Themes
 - Click Gui
 - Gui Editor
-- Zoom Hotkey
+- Zoom Hotkey 
 - Clientside Anticheat
- 
+
+### Features To Merge
+- Keystrokes [Shows what Keys are beeing pressed]
+- Coordinates Hud [Shows your Coordinates]
+- Direction Hud [Shows your direction]
+- Fullbright [See in the Dark]
+- Auto Sprint [Presses Sprint Key for you]
+- No Break Particles [Removes the Clientside break Particles]
+- No Explosion Particles [Removes the Clientside Explosion Particles]
+- Own Nametag [Shows your Own Nametag]
+- Hotbar Display [Health and Hunger Bar rendering with actual bars]
+- Gui Editor
+- Zoom Hotkey
+
 ### Images
 <img src="https://user-images.githubusercontent.com/74710895/236004455-eacbeda2-99b9-4c7e-8857-ddbcdcaf49d4.png" width="50%" /></p>
 <img src="https://user-images.githubusercontent.com/74710895/236005170-00e54361-04e1-480c-bb99-9a23d985c72d.png" width="50%" /></p>
