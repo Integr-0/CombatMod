@@ -68,62 +68,16 @@ public class Detector {
     }
 
     public boolean PlayerFlying(PlayerEntity e) {
-        if (mc.world.getBlockState(e.getBlockPos().add(0, -1, 0)).getBlock() == Blocks.AIR) {
-            if (mc.world.getBlockState(e.getBlockPos().add(1, -1, 1)).getBlock() == Blocks.AIR) {
-                if (mc.world.getBlockState(e.getBlockPos().add(-1, -1, -1)).getBlock() == Blocks.AIR) {
-                    if (mc.world.getBlockState(e.getBlockPos().add(0, -1, 1)).getBlock() == Blocks.AIR) {
-                        if (mc.world.getBlockState(e.getBlockPos().add(1, -1, 0)).getBlock() == Blocks.AIR) {
-                            if (mc.world.getBlockState(e.getBlockPos().add(0, -1, -1)).getBlock() == Blocks.AIR) {
-                                if (mc.world.getBlockState(e.getBlockPos().add(-1, -1, 0)).getBlock() == Blocks.AIR) {
-                                    if (mc.world.getBlockState(e.getBlockPos().add(-1, -1, 1)).getBlock() == Blocks.AIR) {
-                                        if (mc.world.getBlockState(e.getBlockPos().add(1, -1, -1)).getBlock() == Blocks.AIR) {
-                                            if (mc.world.getBlockState(e.getBlockPos().add(0, -2, 0)).getBlock() == Blocks.AIR) {
-                                                if (mc.world.getBlockState(e.getBlockPos().add(1, -2, 1)).getBlock() == Blocks.AIR) {
-                                                    if (mc.world.getBlockState(e.getBlockPos().add(-1, -2, -1)).getBlock() == Blocks.AIR) {
-                                                        if (mc.world.getBlockState(e.getBlockPos().add(0, -2, 1)).getBlock() == Blocks.AIR) {
-                                                            if (mc.world.getBlockState(e.getBlockPos().add(1, -2, 0)).getBlock() == Blocks.AIR) {
-                                                                if (mc.world.getBlockState(e.getBlockPos().add(0, -2, -1)).getBlock() == Blocks.AIR) {
-                                                                    if (mc.world.getBlockState(e.getBlockPos().add(-1, -2, 0)).getBlock() == Blocks.AIR) {
-                                                                        if (mc.world.getBlockState(e.getBlockPos().add(-1, -2, 1)).getBlock() == Blocks.AIR) {
-                                                                            if (mc.world.getBlockState(e.getBlockPos().add(1, -2, -1)).getBlock() == Blocks.AIR) {
-                                                                                if (mc.world.getBlockState(e.getBlockPos().add(0, -3, 0)).getBlock() == Blocks.AIR) {
-                                                                                    if (mc.world.getBlockState(e.getBlockPos().add(1, -3, 1)).getBlock() == Blocks.AIR) {
-                                                                                        if (mc.world.getBlockState(e.getBlockPos().add(-1, -3, -1)).getBlock() == Blocks.AIR) {
-                                                                                            if (mc.world.getBlockState(e.getBlockPos().add(0, -3, 1)).getBlock() == Blocks.AIR) {
-                                                                                                if (mc.world.getBlockState(e.getBlockPos().add(1, -3, 0)).getBlock() == Blocks.AIR) {
-                                                                                                    if (mc.world.getBlockState(e.getBlockPos().add(0, -3, -1)).getBlock() == Blocks.AIR) {
-                                                                                                        if (mc.world.getBlockState(e.getBlockPos().add(-1, -3, 0)).getBlock() == Blocks.AIR) {
-                                                                                                            if (mc.world.getBlockState(e.getBlockPos().add(-1, -3, 1)).getBlock() == Blocks.AIR) {
-                                                                                                                if (mc.world.getBlockState(e.getBlockPos().add(1, -3, -1)).getBlock() == Blocks.AIR) {
-                                                                                                                    return true;
-                                                                                                                }
-                                                                                                            }
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+        boolean result = true;
+        for(int x = -1; x < 1; x++){
+            for(int y = -3; y < 0; y++){
+                for(int z = -1; z < 2;z++){
+                     result &= mc.world.getBlockState(e.getBlockPos().add(x, y, z)).getBlock() == Blocks.AIR
                 }
             }
         }
 
-        return false;
+        return result;
+        
     }
 }
