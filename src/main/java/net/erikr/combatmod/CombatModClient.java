@@ -278,18 +278,25 @@ public class CombatModClient implements ClientModInitializer {
         }
 
         //Theme Switcher
-        if (SharedVariables.ThemeColor.equals("Orange")) {
-            SharedVariables.GuiColor = new Color(249, 141, 0, 255).getRGB();
-        } else if (SharedVariables.ThemeColor.equals("Blue")){
-            SharedVariables.GuiColor = new Color(16, 213, 235, 255).getRGB();
-        } else if (SharedVariables.ThemeColor.equals("Red")){
-            SharedVariables.GuiColor = new Color(244, 3, 31, 255).getRGB();
-        } else if (SharedVariables.ThemeColor.equals("Green")){
-            SharedVariables.GuiColor = new Color(1, 209, 26, 255).getRGB();
-        } else if (SharedVariables.ThemeColor.equals("Yellow")){
-            SharedVariables.GuiColor = new Color(235, 231, 16, 255).getRGB();
-        } else if (SharedVariables.ThemeColor.equals("Rainbow")){
-            SharedVariables.GuiColor = new Color(getRainbowColor()[0], getRainbowColor()[1], getRainbowColor()[2]).getRGB();
+        switch (SharedVariables.ThemeColor) {
+            case "Orange":
+                SharedVariables.GuiColor = new Color(249, 141, 0, 255).getRGB();
+                break;
+            case "Blue":
+                SharedVariables.GuiColor = new Color(16, 213, 235, 255).getRGB();
+                break;
+            case "Red":
+                SharedVariables.GuiColor = new Color(244, 3, 31, 255).getRGB();
+                break;
+            case "Green":
+                SharedVariables.GuiColor = new Color(1, 209, 26, 255).getRGB();
+                break;
+            case "Yellow":
+                SharedVariables.GuiColor = new Color(235, 231, 16, 255).getRGB();
+                break;
+            case "Rainbow":
+                SharedVariables.GuiColor = new Color(getRainbowColor()[0], getRainbowColor()[1], getRainbowColor()[2]).getRGB();
+                break;
         }
     }
 
